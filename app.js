@@ -33,7 +33,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let multiply = a * b;
   let string = 'The product of ' + a + ' and ' + b  + ' is ' + multiply + '.';
-  console.log(multiply);
+  console.log(string);
   return [multiply, string];
 }
 
@@ -56,10 +56,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 // your previous function sum returns an array. let answer = sum(10, 5)[0];
+  let sum3 = sum(sum(a, b)[0], c)[0];
+  let multiply3 = multiply(multiply(a, b)[0], c)[0];
+  let string1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.';
+  console.log(string1);
+  let string2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply3 + '.';
+  console.log(string2);
+  return [sum3, multiply3, string1, string2];
 }
-
-// Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+// Here is the test for sumAndMtestSumAndMultiply(4,7,5);ultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
